@@ -1,4 +1,4 @@
-import { ja } from '../types';
+import { ja } from '../_types.js';
 export declare class Timeline {
     /**
      * A unique identifier for the timeline.

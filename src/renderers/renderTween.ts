@@ -1,10 +1,19 @@
-import { byNumber, clamp, toNumber, findUpperIndex } from '../utils/numbers';
-import { detectTargetType, getReader, getWriter, getMixer } from '../adapters';
-import { retrieveValue, storeValue, clearKeys } from '../services/valuecache';
-import { getEase, eases } from '../eases/eases';
-import { resolveTargets } from '../services/targets';
-import { ja } from '../types';
-import { IDLE } from '../utils/playStates';
+import { byNumber, clamp, toNumber, findUpperIndex } from '../utils/numbers.js';
+import {
+  detectTargetType,
+  getReader,
+  getWriter,
+  getMixer,
+} from '../adapters/index.js';
+import {
+  retrieveValue,
+  storeValue,
+  clearKeys,
+} from '../services/valuecache.js';
+import { getEase, eases } from '../eases/eases.js';
+import { resolveTargets } from '../services/targets.js';
+import { ja } from '../_types.js';
+import { IDLE } from '../utils/playStates.js';
 
 /**
  * Renders the current state of the dopesheet.
@@ -55,7 +64,7 @@ export function renderTween(
               initialValue = currentValue;
               storeValue(id, target, propName, currentValue);
             }
-            lowerValue = initialValue;
+            lowerValue = initialValue as ja.AnimationValue;
           } else {
             lowerValue = lowerFrame.value;
           }

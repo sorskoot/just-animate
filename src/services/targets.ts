@@ -1,4 +1,4 @@
-import { ja } from '../types';
+import { ja } from '../_types.js';
 
 /**
  * Resolves a selector or an at-target.

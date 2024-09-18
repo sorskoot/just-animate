@@ -1,4 +1,4 @@
-import { ja } from "../types";
+import { ja } from '../_types.js';
 /**
  * Clear the cache for the target and id.
  * @param id

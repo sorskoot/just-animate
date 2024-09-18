@@ -1,5 +1,5 @@
-import { Timeline } from './timeline';
-import { ja } from '../types';
+import { Timeline } from './timeline.js';
+import { ja } from '../_types.js';
 /**
  * Configure a tween from the (current) position for the duration specified.
  * @param targets The element, object, or selector to animate.
@@ -31,7 +31,7 @@ declare function set<T>(this: Timeline, targets: T | string, props: ja.KeyframeP
  * @public
  */
 declare function target(this: Timeline, alias: string, target: ja.AnimationTarget): Timeline;
-declare module './timeline' {
+declare module './timeline.js' {
     interface Timeline {
         animate: typeof animate;
         delay: typeof delay;

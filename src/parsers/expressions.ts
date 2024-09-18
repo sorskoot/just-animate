@@ -10,18 +10,18 @@ import {
   PAREN_OPEN_REGEX,
   PAREN_OPEN,
   SYNTAX_REGEX,
-  SYNTAX
-} from "./common";
+  SYNTAX,
+} from './common.js';
 
 import {
   PATH_COMMAND_REGEX,
   STRING_REGEX,
   UNIT_REGEX,
   NUMBER_REGEX,
-  HEX_REGEX
-} from "./common";
+  HEX_REGEX,
+} from './common.js';
 
-import { hexToRgb } from "./colors";
+import { hexToRgb } from './colors.js';
 
 export interface MixerParserContext extends ParserContext {
   isPath: boolean;
@@ -44,21 +44,21 @@ export function nextToken(ctx: MixerParserContext): number | undefined {
     const isFunction =
       !ctx.isPath &&
       ctx.pos < ctx.pattern.length - 1 &&
-      ctx.pattern[ctx.pos] === "(";
+      ctx.pattern[ctx.pos] === '(';
 
     if (!isFunction) {
       return STRING;
     }
-    if (ctx.match.toLowerCase() === "rgb") {
+    if (ctx.match.toLowerCase() === 'rgb') {
       const searchString = ctx.pattern.substring(ctx.pos);
-      const endOfString = searchString.indexOf(")");
+      const endOfString = searchString.indexOf(')');
       const terms = searchString.substring(1, endOfString);
 
       ctx.pattern =
         ctx.pattern.substring(0, ctx.pos + 1 + terms.length) +
-        ",1" +
+        ',1' +
         ctx.pattern.substring(ctx.pos + 1 + terms.length);
-      ctx.match = "rgba";
+      ctx.match = 'rgba';
     }
     return FUNCTION;
   }

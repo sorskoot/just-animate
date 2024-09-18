@@ -1,4 +1,4 @@
-import { ja } from '../types';
+import { ja } from '../_types.js';
 export declare const renderers: Array<(config: ja.TimelineConfig, operations: Array<() => void>) => void>;
 /**
  * Enqueues the timeline to be updated and rendered.

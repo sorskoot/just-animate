@@ -1,4 +1,4 @@
-import { ja } from "../types";
+import { ja } from '../_types.js';
 
 export function readCssVar(target: HTMLElement, key: string) {
   return target.style.getPropertyValue(key);

@@ -1,2 +1,2 @@
-import { linear } from "./linear";
+import { linear } from './linear.js';
 export declare const cubicBezier: (cx1: number, cy1: number, cx2: number, cy2: number) => typeof linear;

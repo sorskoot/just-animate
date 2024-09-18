@@ -1,9 +1,9 @@
-import { ja } from "../types";
-import { readAttribute, writeAttribute } from "./attribute";
-import { readCssVar, writeCssVar } from "./cssvar";
-import { readStyle, writeStyle } from "./style";
-import { readProperty, writeProperty } from "./property";
-import { autoMix } from "./mix";
+import { ja } from '../_types.js';
+import { readAttribute, writeAttribute } from './attribute.js';
+import { readCssVar, writeCssVar } from './cssvar.js';
+import { readStyle, writeStyle } from './style.js';
+import { readProperty, writeProperty } from './property.js';
+import { autoMix } from './mix.js';
 
 export interface TargetMixer {
   (
@@ -32,22 +32,22 @@ export const PROPERTY = 0,
   ATTRIBUTE = 2,
   STYLE = 3;
 
-const htmlAttributeOnly = ["viewBox"];
-const htmlPropOnly = ["innerHTML", "textContent"];
+const htmlAttributeOnly = ['viewBox'];
+const htmlPropOnly = ['innerHTML', 'textContent'];
 
 export function detectTargetType(
   target: ja.AnimationTarget,
   propertyName: string
 ): TargetType {
   const isProbablyHTMLElement =
-    typeof (target as HTMLElement).tagName === "string" &&
+    typeof (target as HTMLElement).tagName === 'string' &&
     (target as HTMLElement).style;
 
   if (!isProbablyHTMLElement) {
     return PROPERTY;
   }
 
-  if (propertyName.indexOf("--") === 0) {
+  if (propertyName.indexOf('--') === 0) {
     return CSS_VAR;
   }
   if (htmlAttributeOnly.indexOf(propertyName) !== -1) {

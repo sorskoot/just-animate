@@ -1,19 +1,19 @@
-import { back } from './eases/back';
-import { bounce } from './eases/bounce';
-import { cubicBezier } from './eases/cubicBezier';
-import { yoyo } from './eases/yoyo';
-import { repeat } from './eases/repeat';
-import { getEase, eases } from './eases/eases';
-import { ja } from './types';
-import { nextAnimationFrame, tick } from './services/tick';
-import { power } from './eases/power';
-import { sine } from './eases/sine';
-import { steps } from './eases/steps';
-import { Timeline } from './components/timeline';
-import { elastic } from './eases/elastic';
-import { renderers } from './services/animator';
-import { renderTween } from './renderers/renderTween';
-import { renderSubtimeline } from './renderers/renderSubtimeline';
+import { back } from './eases/back.js';
+import { bounce } from './eases/bounce.js';
+import { cubicBezier } from './eases/cubicBezier.js';
+import { yoyo } from './eases/yoyo.js';
+import { repeat } from './eases/repeat.js';
+import { getEase, eases } from './eases/eases.js';
+import { ja } from './_types.js';
+import { nextAnimationFrame, tick } from './services/tick.js';
+import { power } from './eases/power.js';
+import { sine } from './eases/sine.js';
+import { steps } from './eases/steps.js';
+import { Timeline } from './components/timeline.js';
+import { elastic } from './eases/elastic.js';
+import { renderers } from './services/animator.js';
+import { renderTween } from './renderers/renderTween.js';
+import { renderSubtimeline } from './renderers/renderSubtimeline.js';
 
 // Register second half of Timeline
 import './components/timeline.animate';

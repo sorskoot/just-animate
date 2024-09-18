@@ -1,5 +1,5 @@
-import { inOut } from "./inOut";
-import { ja } from "../types";
+import { inOut } from './inOut.js';
+import { ja } from '../_types.js';
 
 const TAU = 2 * Math.PI;
 
@@ -15,7 +15,7 @@ export function elastic(
   bounces = +(bounces || bounces === 0 ? bounces : 4);
 
   const s = period / bounces;
-  return inOut(n => {
+  return inOut((n) => {
     if (n === 0 || n === 1) {
       return n;
     }

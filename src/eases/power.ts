@@ -1,5 +1,5 @@
-import { inOut } from "./inOut";
-import { ja } from "../types";
+import { inOut } from './inOut.js';
+import { ja } from '../_types.js';
 
 export function power(type?: ja.EaseTypes, c?: number) {
   // Ensure it is actually a number.

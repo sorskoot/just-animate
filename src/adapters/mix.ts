@@ -1,12 +1,12 @@
-import { ja } from '../types';
-import { isNumeric } from '../utils/numbers';
-import { clearContext, NUMBER, UNIT, FUNCTION } from '../parsers/common';
+import { ja } from '../_types.js';
+import { isNumeric } from '../utils/numbers.js';
+import { clearContext, NUMBER, UNIT, FUNCTION } from '../parsers/common.js';
 import {
   MixerParserContext,
   nextToken as nextExp,
-} from '../parsers/expressions';
+} from '../parsers/expressions.js';
 
-import { negateTransformList } from './negateTransformList';
+import { negateTransformList } from './negateTransformList.js';
 
 const UNIT_EXTRACTOR_REGEX = /([a-z%]+)/i;
 const PATH_REGEX = /^m[\s,]*-?\d*\.?\d+/i;

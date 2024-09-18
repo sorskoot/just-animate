@@ -1,0 +1,1 @@
+{"version":3,"file":"attribute.js","sourceRoot":"","sources":["../../src/adapters/attribute.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,aAAa,CAAC,MAAmB,EAAE,GAAW;IAC5D,OAAO,MAAM,CAAC,YAAY,CAAC,GAAG,CAAC,IAAI,EAAE,CAAC;AACxC,CAAC;AAED,MAAM,UAAU,cAAc,CAC5B,MAAmB,EACnB,GAAW,EACX,KAAyB;IAEzB,MAAM,CAAC,YAAY,CAAC,GAAG,EAAE,KAAK,CAAC,QAAQ,EAAE,CAAC,CAAC;AAC7C,CAAC"}

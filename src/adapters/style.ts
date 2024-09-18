@@ -1,4 +1,4 @@
-import { ja } from "../types";
+import { ja } from '../_types.js';
 
 export function readStyle(target: HTMLElement, key: string) {
   return target.style[key] || getComputedStyle(target)[key];

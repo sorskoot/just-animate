@@ -1,7 +1,7 @@
-import { nextAnimationFrame, tick } from './services/tick';
-import { Timeline } from './components/timeline';
-import { renderers } from './services/animator';
-import { renderSubtimeline } from './renderers/renderSubtimeline';
+import { nextAnimationFrame, tick } from './services/tick.js';
+import { Timeline } from './components/timeline.js';
+import { renderers } from './services/animator.js';
+import { renderSubtimeline } from './renderers/renderSubtimeline.js';
 
 // Register timeline renderers.
 renderers.push(renderSubtimeline);

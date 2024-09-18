@@ -1,12 +1,12 @@
-import { inOut } from "./inOut";
-import { ja } from "../types";
-import { mirror } from "./mirror";
+import { inOut } from './inOut.js';
+import { ja } from '../_types.js';
+import { mirror } from './mirror.js';
 
 export function bounce(type?: ja.EaseTypes, factor?: number) {
   // Guard if factor comes in as a string.
   factor = +(factor || factor === 0 ? factor : 7.5625);
   return inOut(
-    mirror(o => {
+    mirror((o) => {
       if (o < 0.36363636) {
         // (-1.0/2.75) to (1.0/2.75), centered on (0.0/2.75)
         return factor! * o * o;

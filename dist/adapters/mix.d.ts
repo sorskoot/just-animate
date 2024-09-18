@@ -1,4 +1,4 @@
-import { ja } from '../types';
+import { ja } from '../_types.js';
 /**
  * This mixer attempts to automatically parse CSS expressions from each value
  * and then create an interpolated value from it.

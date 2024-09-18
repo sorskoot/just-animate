@@ -1,6 +1,18 @@
-import { ParserContext, match, SYNTAX, NUMBER, UNIT, FUNCTION } from "./common";
+import {
+  ParserContext,
+  match,
+  SYNTAX,
+  NUMBER,
+  UNIT,
+  FUNCTION,
+} from './common.js';
 
-import { NUMBER_REGEX, SYNTAX_REGEX, UNIT_REGEX, STRING_REGEX } from "./common";
+import {
+  NUMBER_REGEX,
+  SYNTAX_REGEX,
+  UNIT_REGEX,
+  STRING_REGEX,
+} from './common.js';
 
 export function nextToken(ctx: ParserContext): number | undefined {
   if (match(ctx, SYNTAX_REGEX)) {

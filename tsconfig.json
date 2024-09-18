@@ -5,8 +5,8 @@
     "allowUnusedLabels": false,
     "forceConsistentCasingInFileNames": true,
     "inlineSourceMap": false,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "noImplicitReturns": false,
@@ -15,7 +15,9 @@
     "removeComments": false,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es2015"
+    "target": "ES2022",
+    "outDir": "./dist"
   },
+  "include": ["./src"],
   "exclude": ["node_modules", "dist"]
 }

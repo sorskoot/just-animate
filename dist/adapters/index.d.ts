@@ -1,4 +1,4 @@
-import { ja } from "../types";
+import { ja } from '../_types.js';
 export interface TargetMixer {
     (left: ja.AnimationValue, right: ja.AnimationValue, offset: number): ja.AnimationValue;
 }

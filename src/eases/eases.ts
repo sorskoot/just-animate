@@ -1,14 +1,14 @@
-import { ja } from '../types';
+import { ja } from '../_types.js';
 import {
   clearContext,
   PAREN_CLOSE,
   NUMBER,
   STRING,
   FUNCTION,
-} from '../parsers/common';
-import { nextToken, MixerParserContext } from '../parsers/expressions';
-import { linear } from './linear';
-import { cachefn } from '../services/cachefn';
+} from '../parsers/common.js';
+import { nextToken, MixerParserContext } from '../parsers/expressions.js';
+import { linear } from './linear.js';
+import { cachefn } from '../services/cachefn.js';
 
 const eases = {} as Record<string, ja.EaseFactory>;
 const easeCtx = {} as MixerParserContext;
@@ -73,7 +73,7 @@ function composeEase(
     return fn;
   }
   const outerFn = easeFactory.apply(0, args);
-  return o => outerFn(fn(o));
+  return (o) => outerFn(fn(o));
 }
 
 const cachedGetEases = cachefn(getEase);

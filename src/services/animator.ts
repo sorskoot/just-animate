@@ -1,7 +1,7 @@
-import { clamp } from '../utils/numbers';
-import { ja } from '../types';
-import { tick } from './tick';
-import { IDLE, CANCEL, FINISH, PAUSED, RUNNING } from '../utils/playStates';
+import { clamp } from '../utils/numbers.js';
+import { ja } from '../_types.js';
+import { tick } from './tick.js';
+import { IDLE, CANCEL, FINISH, PAUSED, RUNNING } from '../utils/playStates.js';
 
 const FRAME_SIZE = 1000 / 60;
 

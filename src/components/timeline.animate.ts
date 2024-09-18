@@ -1,6 +1,6 @@
-import { Timeline } from './timeline';
-import { resolveTargets } from '../services/targets';
-import { ja } from '../types';
+import { Timeline } from './timeline.js';
+import { resolveTargets } from '../services/targets.js';
+import { ja } from '../_types.js';
 
 /**
  * Configure a tween from the (current) position for the duration specified.
@@ -137,7 +137,7 @@ Timeline.prototype.delay = delay;
 Timeline.prototype.set = set;
 Timeline.prototype.target = target;
 
-declare module './timeline' {
+declare module './timeline.js' {
   interface Timeline {
     animate: typeof animate;
     delay: typeof delay;

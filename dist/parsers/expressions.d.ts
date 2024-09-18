@@ -1,4 +1,4 @@
-import { ParserContext } from "./common";
+import { ParserContext } from './common.js';
 export interface MixerParserContext extends ParserContext {
     isPath: boolean;
 }

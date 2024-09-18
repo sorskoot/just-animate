@@ -1,6 +1,6 @@
-import { ja } from '../types';
-import { queueTransition } from '../services/animator';
-import { FINISH, RUNNING, CANCEL, PAUSED } from '../utils/playStates';
+import { ja } from '../_types.js';
+import { queueTransition } from '../services/animator.js';
+import { FINISH, RUNNING, CANCEL, PAUSED } from '../utils/playStates.js';
 
 let autoNumber = 0;
 

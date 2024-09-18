@@ -4,6 +4,7 @@
     "just-curves": "^0.2.0"
   },
   "devDependencies": {
+    "cypress": "^13.14.2",
     "esbuild": "0.23.1"
   },
   "homepage": "http://just-animate.com",
@@ -16,8 +17,8 @@
     "url": "https://github.com/just-animate/just-animate"
   },
   "scripts": {
-    "buid": "esbuild --bundle --minify --sourcemap --target=es2015 --format=esm --outdir=dist src/index.ts",
-    "types":"tsc --emitDeclarationOnly --outDir dist",
+    "build": "esbuild --bundle --minify --sourcemap --target=es2015 --format=esm --outdir=dist src/index.ts",
+    "types": "tsc --emitDeclarationOnly --outDir dist",
     "Xbuild": "npm run copy:types && npm run build:full:prod && npm run build:full:dev",
     "Xbuild:full:debug": "rollup -w -c ./config/rollup.umd.js --configDebug",
     "Xbuild:full:dev": "rollup -c ./config/rollup.umd.js --configDebug",
@@ -27,11 +28,12 @@
     "format": "prettier --print-width 80 --single-quote --list-different --write \"src/**/*.ts\"",
     "lint": "tslint --project .",
     "start": "npm run clean && npm run lint && npm run build",
-    "test": "npm run build:full:dev && ./node_modules/.bin/cypress run",
+    "test": "cypress run",
+    "test:open": "cypress open",
     "test:debug": "npm run build:full:debug & ./node_modules/.bin/cypress open"
   },
   "type": "module",
-  "types": "./types/main",
+  "types": "./types.d.ts",
   "typings": "./types/main",
   "typeRoots": [
     "node_modules/@types"

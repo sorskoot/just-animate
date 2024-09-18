@@ -1,4 +1,4 @@
-import { ja } from '../types';
+import { ja } from '../_types.js';
 /**
  * Renders the current state of the dopesheet.
  * @param config The configuration to read.

@@ -1,6 +1,6 @@
-import { ja } from './types';
-import { nextAnimationFrame, tick } from './services/tick';
-import { Timeline } from './components/timeline';
+import { ja } from './_types.js';
+import { nextAnimationFrame, tick } from './services/tick.js';
+import { Timeline } from './components/timeline.js';
 import './components/timeline.animate';
 /**
  * Convenience method for doing animations.

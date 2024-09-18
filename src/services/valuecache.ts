@@ -1,6 +1,6 @@
-import { ja } from "../types";
+import { ja } from '../_types.js';
 
-const CACHE = "__just_cache";
+const CACHE = '__just_cache';
 
 /**
  * Clear the cache for the target and id.

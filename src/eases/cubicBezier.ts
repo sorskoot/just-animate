@@ -1,4 +1,4 @@
-import { linear } from "./linear";
+import { linear } from './linear.js';
 
 const MAX_ITERATIONS = 19;
 

@@ -1,4 +1,4 @@
-import { cachefn } from '../services/cachefn';
+import { cachefn } from '../services/cachefn.js';
 
 function hexToRgb(hex: string) {
   // Parse 3 or 6 hex to an integer using 16 base.

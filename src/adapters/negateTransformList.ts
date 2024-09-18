@@ -4,9 +4,9 @@ import {
   FUNCTION,
   UNIT,
   NUMBER,
-} from '../parsers/common';
-import { nextToken } from '../parsers/transforms';
-import { cachefn } from '../services/cachefn';
+} from '../parsers/common.js';
+import { nextToken } from '../parsers/transforms.js';
+import { cachefn } from '../services/cachefn.js';
 
 const ctxTransform = {} as ParserContext;
 
